@@ -36,12 +36,13 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const data = getOrCreateKeywordData(q, queryKeyword);
 
   return {
-    title: `${data.title} | Zero-AI & 100% Turnitin-Safe (US, UK, CA, AU)`,
-    description: `${data.metaDescription} Headquartered in Los Angeles, USA. Serving students across all 54 US states & territories, UK cities, Canada, and Australia.`,
+    metadataBase: new URL("https://essaywriters.homeworkdoers.help"),
+    title: data.title,
+    description: data.metaDescription,
     keywords: [
       data.keyword,
-      "essay writing service",
-      "custom essay writing",
+      `pay someone to write ${data.keyword}`,
+      `hire writer for ${data.keyword}`,
       "zero AI essay",
       "Turnitin safe papers",
       "academic research help",
@@ -54,14 +55,14 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       "Los Angeles academic research",
     ],
     alternates: {
-      canonical: `/${data.slug}`,
+      canonical: `https://essaywriters.homeworkdoers.help/${data.slug}`,
     },
     openGraph: {
       title: data.title,
       description: data.metaDescription,
       type: "article",
       siteName: "EssayWriters",
-      url: `/${data.slug}`,
+      url: `https://essaywriters.homeworkdoers.help/${data.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -94,7 +95,7 @@ export default async function DynamicKeywordPage({ params, searchParams }: PageP
   }
 
   // JSON-LD Structured Data with full 54 US States, UK Cities, Canada, Australia & LA HQ
-  const jsonLd = generateKeywordPageJsonLd(data, "https://essaywriters.org");
+  const jsonLd = generateKeywordPageJsonLd(data, "https://essaywriters.homeworkdoers.help");
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground">

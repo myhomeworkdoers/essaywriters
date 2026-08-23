@@ -112,7 +112,7 @@ export const HEADQUARTERS_INFO = {
   name: "EssayWriters",
   legalName: "EssayWriters Academic Research & Model Writing Services LLC",
   telephone: "+1 (800) 932-8149",
-  email: "support@essaywriters.org",
+  email: "support@homeworkdoers.help",
   address: {
     "@type": "PostalAddress",
     streetAddress: "633 W 5th St, Floor 28",
@@ -134,7 +134,7 @@ export const HEADQUARTERS_INFO = {
 // HOMEPAGE SCHEMA BUILDER
 // ==========================================
 
-export function generateHomepageJsonLd(baseUrl: string = "https://essaywriters.org") {
+export function generateHomepageJsonLd(baseUrl: string = "https://essaywriters.homeworkdoers.help") {
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -204,7 +204,7 @@ export function generateHomepageJsonLd(baseUrl: string = "https://essaywriters.o
 // DYNAMIC KEYWORD PAGE SCHEMA BUILDER
 // ==========================================
 
-export function generateKeywordPageJsonLd(data: KeywordData, baseUrl: string = "https://essaywriters.org") {
+export function generateKeywordPageJsonLd(data: KeywordData, baseUrl: string = "https://essaywriters.homeworkdoers.help") {
   const pageUrl = `${baseUrl}/${data.slug}`;
 
   return {

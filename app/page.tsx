@@ -35,6 +35,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://essaywriters.homeworkdoers.help"),
   title: "EssayWriters | Zero-AI & 100% Turnitin-Safe Custom Academic Papers (US, UK, CA, AU)",
   description:
     "Headquartered in Los Angeles, USA. Connect with vetted US, UK, Australian & Canadian Master's and PhD academic writers. 100% human-researched, Turnitin-verified, 0% AI, and 24/7 direct scholar chat. Starting at $9.99/page.",
@@ -54,14 +55,14 @@ export const metadata: Metadata = {
     "Los Angeles essay writing service",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://essaywriters.homeworkdoers.help",
   },
   openGraph: {
     title: "EssayWriters | Premier Zero-AI Academic Writing & Research Platform",
     description:
       "Order custom essays, term papers, and dissertations from verified PhD scholars. 100% Turnitin similarity and CopyLeaks AI-free certification across US, UK, Canada & Australia.",
     type: "website",
-    url: "/",
+    url: "https://essaywriters.homeworkdoers.help",
     siteName: "EssayWriters",
   },
   twitter: {
@@ -106,7 +107,7 @@ export default function HomePage() {
   ];
 
   // Schema.org Structured Data with full 54 US states, UK cities, Canada, Australia & LA HQ
-  const homeJsonLd = generateHomepageJsonLd("https://essaywriters.org");
+  const homeJsonLd = generateHomepageJsonLd("https://essaywriters.homeworkdoers.help");
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
